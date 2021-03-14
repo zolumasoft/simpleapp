@@ -6,6 +6,6 @@ FROM builder
 ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 COPY /web /app
-RUN adduser --disabled-password --shell /bin/bash --gecos "User" apprunner && chown -R apprunner /app
+RUN adduser --disabled-password --shell /bin/bash --gecos "User" apprunner && chown -R apprunner:apprunner /app
 USER apprunner
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "server:server"]
