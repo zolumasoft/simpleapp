@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}In Search of Growth{% endblock %}
+
+{% block content %}
+    <h1>Simple App</h1>
+    {% if hostname %}
+    <h4>{{hostname}}</h4>
+    {% else %}
+    <h4>Nothing to see here</h4>
+    {% endif %}
+{% endblock %}
