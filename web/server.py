@@ -8,3 +8,8 @@ server = Flask(__name__)
 def home():
     host_name =os.uname().nodename
     return render_template("index.html", hostname=host_name)
+
+
+@server.route("/health")
+def health_status():
+    return "App is healthy\n"

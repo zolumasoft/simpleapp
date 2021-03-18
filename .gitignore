@@ -3,3 +3,6 @@
 env
 venv
 __pycache__/
+create_jenkinsfile.sh
+create_tests.sh
+*.pyc
