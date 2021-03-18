@@ -9,7 +9,7 @@ pipeline {
           pip install -r requirements.txt
           python test_simpleapp.py
         '''
-      }   
+      }
     }
   }
 }
