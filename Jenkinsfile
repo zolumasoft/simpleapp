@@ -12,7 +12,12 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'python test_simpleapp.py'
+        sh '''
+          python -m venv .venv
+          . .venv/bin/activate
+          pip install -r requirements.txt
+          python test_simpleapp.py
+        '''
       }   
     }
   }
